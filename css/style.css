@@ -392,6 +392,12 @@ button {
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
+@media screen and (max-width: 1024px) {
+  .preloader .preloaderImg {
+    width: 100px;
+    height: 100px;
+  }
+}
 .preloader .preloaderImg::after {
   content: "";
   position: absolute;
@@ -403,6 +409,12 @@ button {
   background-color: var(--thirdColor);
   transform: translate(50%, -50%);
   animation: slide-up 1.5s forwards;
+}
+@media screen and (max-width: 1024px) {
+  .preloader .preloaderImg::after {
+    width: 110px;
+    height: 110px;
+  }
 }
 @keyframes slide-up {
   from {
@@ -455,7 +467,7 @@ header nav .logo {
 }
 header nav .logo img {
   min-width: 120px;
-  height: 80px;
+  height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: var(--transition);
@@ -517,14 +529,14 @@ header nav .menu .icon {
   display: flex;
   gap: 6px;
   flex-direction: column;
-  align-items: end;
+  align-items: start;
   justify-content: center;
   transition: var(--transition);
   width: 30px;
 }
 header nav .menu .icon::after, header nav .menu .icon::before {
   content: "";
-  width: 30px;
+  width: 20px;
   height: 2px;
   background-color: var(--whiteColor);
   display: flex;
@@ -533,13 +545,13 @@ header nav .menu .icon::after, header nav .menu .icon::before {
   margin-top: 8px;
 }
 header nav .menu .icon::after {
-  width: 20px;
+  width: 25px;
   margin-top: -8px;
 }
 header nav .menu.active .icon::after, header nav .menu.active .icon::before {
   position: absolute;
   transform: rotate(45deg);
-  width: 30px;
+  width: 20px;
   margin-top: 0px;
 }
 header nav .menu.active .icon::after {
@@ -566,9 +578,9 @@ header nav .language a::selection {
   header {
     mix-blend-mode: normal;
     background-color: var(--darkColor);
-    padding: 10px 0;
+    padding: 16px 0;
   }
   header nav .logo img {
-    height: 60px;
+    height: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

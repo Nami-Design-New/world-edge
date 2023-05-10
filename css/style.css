@@ -368,7 +368,7 @@ button {
 }
 
 .preloader {
-  background-color: var(--mainColor);
+  background-color: var(--darkColor);
   position: fixed;
   top: 0;
   left: 0;
@@ -380,7 +380,7 @@ button {
   align-items: center;
 }
 .preloader .preloaderImg {
-  background-color: var(--thirdColor);
+  background-color: var(--whiteColor);
   width: 150px;
   height: 150px;
   -webkit-mask-image: url("../img/logo.svg");
@@ -400,7 +400,7 @@ button {
   width: 160px;
   height: 160px;
   z-index: 2;
-  background-color: var(--whiteColor);
+  background-color: var(--thirdColor);
   transform: translate(50%, -50%);
   animation: slide-up 1.5s forwards;
 }

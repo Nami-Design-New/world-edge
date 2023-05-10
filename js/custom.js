@@ -10,10 +10,38 @@ $(document).ready(function () {
   }
   setFavicon();
 
+  // // nav menu
+  // $("header .menu").click(function () {
+  //   $(this).toggleClass("active");
+  //   $("header .links").toggleClass("active");
+  // });
+
   // nav menu
-  $("header .menu").click(function () {
+  $(".navBtn").click(function () {
     $(this).toggleClass("active");
-    $("header .links").toggleClass("active");
+    $(".navMenu").toggleClass("active");
+  });
+  // nav menu
+  $(".more .linksBtn").click(function () {
+    $(this).toggleClass("show");
+    $(".more .linksMenu").toggleClass("show");
+  });
+  // hide menu when clicking outside
+  $(document).click(function (event) {
+    if (!$(event.target).closest(".more").length) {
+      // if click happened outside of .more element, hide menu
+      $(".more .linksBtn").removeClass("show");
+      $(".more .linksMenu").removeClass("show");
+    }
+  });
+  //navbar ainmation
+  $(window).scroll(function () {
+    var appScroll = $(document).scrollTop();
+    if (appScroll >= 1) {
+      $(".pageHeader").addClass("headerAnimate");
+    } else {
+      $(".pageHeader").removeClass("headerAnimate");
+    }
   });
 });
 // ////////////////////////////////////////

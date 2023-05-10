@@ -439,12 +439,12 @@ header {
   left: 0;
   z-index: 999;
   width: 100%;
-  mix-blend-mode: difference !important;
+  mix-blend-mode: difference;
+  padding: 20px 0;
 }
 header nav {
   width: min(100% - 24px, 1400px);
   display: flex;
-  padding: 20px 0;
   align-items: center;
   gap: 12px;
 }
@@ -489,7 +489,7 @@ header nav .links a::selection {
     width: 300px;
     height: 100%;
     flex-direction: column;
-    background: #000;
+    background: var(--darkColor);
     align-items: flex-start;
     z-index: -1;
   }
@@ -561,4 +561,14 @@ header nav .language a::-moz-selection {
 }
 header nav .language a::selection {
   background-color: var(--darkColor);
+}
+@media screen and (max-width: 1024px) {
+  header {
+    mix-blend-mode: normal;
+    background-color: var(--darkColor);
+    padding: 10px 0;
+  }
+  header nav .logo img {
+    height: 60px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -725,15 +725,9 @@ header .more .linksMenu.show {
 }
 
 .mainSection {
-  min-height: calc(100vh - 92px);
   position: relative;
   display: flex;
   justify-content: center;
-}
-@media (max-width: 1200px) {
-  .mainSection {
-    min-height: calc(100vh - 72px);
-  }
 }
 .mainSection .inner {
   width: min(100% - 0px, 1400px);
@@ -745,7 +739,7 @@ header .more .linksMenu.show {
 }
 @media (max-width: 1200px) {
   .mainSection .inner {
-    padding: 40px 24px 0px;
+    padding: 40px 28px 0px;
   }
 }
 .mainSection .inner .head {
@@ -758,6 +752,7 @@ header .more .linksMenu.show {
   text-transform: uppercase;
   color: var(--whiteColor);
   font-size: 60px;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .mainSection .inner .head .title {
@@ -766,12 +761,15 @@ header .more .linksMenu.show {
 }
 .mainSection .inner .head .hint {
   color: #d6d6d6;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
+  letter-spacing: 14px;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .mainSection .inner .head .hint {
-    font-size: 20px;
+    font-size: 12px;
+    letter-spacing: 8px;
   }
 }
 .mainSection .videoSlider {

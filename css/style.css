@@ -475,7 +475,7 @@ header nav .logo img {
 }
 @media (max-width: 1200px) {
   header nav .logo img {
-    height: 50px;
+    height: 40px;
   }
 }
 header nav .navMenu {
@@ -681,6 +681,11 @@ header .more .linksMenu.show {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
 }
+@media (max-width: 1200px) {
+  .Vtext span {
+    font-size: 12px;
+  }
+}
 .Vtext.side {
   left: unset;
   right: 4px;
@@ -727,15 +732,20 @@ header .more .linksMenu.show {
 }
 @media (max-width: 1200px) {
   .mainSection {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 72px);
   }
 }
 .mainSection .inner {
   width: min(100% - 0px, 1400px);
   display: flex;
   flex-direction: column;
-  padding: 100px 20px 20px;
+  padding: 80px 20px 20px;
   position: relative;
+}
+@media (max-width: 1200px) {
+  .mainSection .inner {
+    padding: 40px 20px 20px;
+  }
 }
 .mainSection .inner .title {
   font-weight: bold;
@@ -753,7 +763,6 @@ header .more .linksMenu.show {
   color: #d6d6d6;
   text-align: center;
   font-size: 30px;
-  letter-spacing: 8px;
   text-transform: uppercase;
 }
 @media (max-width: 1200px) {

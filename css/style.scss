@@ -574,7 +574,7 @@ header {
         transition: var(--transition);
         object-fit: contain;
         @media (max-width: 1200px) {
-          height: 50px;
+          height: 40px;
         }
       }
     }
@@ -776,6 +776,9 @@ header {
     padding: 20px 0;
     background-color: #1f1f1f00;
     backdrop-filter: blur(24px);
+    @media (max-width: 1200px) {
+      font-size: 12px;
+    }
   }
   &.side {
     left: unset;
@@ -820,15 +823,17 @@ header {
   display: flex;
   justify-content: center;
   @media (max-width: 1200px) {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 72px);
   }
   .inner {
     width: min(100% - 0px, 1400px);
     display: flex;
-    
     flex-direction: column;
-    padding: 100px 20px 20px;
+    padding: 80px 20px 20px;
     position: relative;
+    @media (max-width: 1200px) {
+      padding: 40px 20px 20px;
+    }
     .title {
       font-weight: bold;
       text-transform: uppercase;
@@ -843,7 +848,6 @@ header {
       color: #d6d6d6;
       text-align: center;
       font-size: 30px;
-      letter-spacing: 8px;
       text-transform: uppercase;
       @media (max-width: 1200px) {
         font-size: 20px;

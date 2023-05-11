@@ -559,7 +559,8 @@ header {
   transition: background 0.3s ease-in-out;
   background-color: transparent;
   @media (max-width: 1200px) {
-    background-color: var(--darkColor);
+    background-color: #1f1f1f80;
+    backdrop-filter: blur(8px);
   }
   nav {
     width: min(100% - 48px, 1200px);
@@ -587,7 +588,7 @@ header {
       transition: var(--transition);
       align-items: center;
       .navLink {
-        padding: 12px 24px;
+        padding: 12px 16px;
         display: flex;
         align-items: center;
         color: var(--whiteColor);
@@ -747,7 +748,8 @@ header {
       right: 0%;
       top: calc(100% + 100px);
       z-index: 2;
-      background-color: var(--thirdColor);
+      background-color: #00000040;
+      backdrop-filter: blur(8px);
       padding: 20px 24px;
       display: flex;
       flex-direction: column;
@@ -769,8 +771,55 @@ header {
 }
 .headerAnimate {
   padding: 0 5px;
-  background-color: var(--darkColor);
+  background-color: #1f1f1f80;
+  backdrop-filter: blur(8px);
   .logo {
     padding: 5px;
   }
+}
+
+.mainSection {
+  height: calc(100vh - 80px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  // align-items: center;
+  // justify-content: center;
+  // overflow: hidden;
+  // &::before{
+  //   content: '';
+  //   width: 30vw;
+  //   aspect-ratio: 1/1;
+  //   background-color: #1f1f1f30;
+  //   position: absolute;
+  //   bottom: calc(0% - 15vw);
+  //   left: calc(50% - 15vw);
+  //   border-radius: 100%;
+  //   // backdrop-filter: blur(8px);
+  //   z-index: -1;
+  // }
+  .title{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    text-align: center;
+    font-size: 60px;
+    @media (max-width: 1200px) {
+      font-size: 35px;
+    }
+  }
+  &::after {
+    content: "";
+    width: 1px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top:  0%;
+    left: 50%;
+    border-radius: 100%;
+    z-index: -2;
+    background-color: #8c43ff30;
+    box-shadow: 0px 0px 100vw 300px #8c43ff80;
+  }
+
 }

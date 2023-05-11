@@ -451,7 +451,9 @@ header {
 }
 @media (max-width: 1200px) {
   header {
-    background-color: var(--darkColor);
+    background-color: rgba(31, 31, 31, 0.5019607843);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
   }
 }
 header nav {
@@ -485,7 +487,7 @@ header nav .navMenu {
   align-items: center;
 }
 header nav .navMenu .navLink {
-  padding: 12px 24px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   color: var(--whiteColor);
@@ -644,7 +646,9 @@ header .more .linksMenu {
   right: 0%;
   top: calc(100% + 100px);
   z-index: 2;
-  background-color: var(--thirdColor);
+  background-color: rgba(0, 0, 0, 0.2509803922);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   padding: 20px 24px;
   display: flex;
   flex-direction: column;
@@ -665,8 +669,42 @@ header .more .linksMenu.show {
 
 .headerAnimate {
   padding: 0 5px;
-  background-color: var(--darkColor);
+  background-color: rgba(31, 31, 31, 0.5019607843);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 .headerAnimate .logo {
   padding: 5px;
+}
+
+.mainSection {
+  height: calc(100vh - 80px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+}
+.mainSection .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--whiteColor);
+  text-align: center;
+  font-size: 60px;
+}
+@media (max-width: 1200px) {
+  .mainSection .title {
+    font-size: 35px;
+  }
+}
+.mainSection::after {
+  content: "";
+  width: 1px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  border-radius: 100%;
+  z-index: -2;
+  background-color: rgba(140, 67, 255, 0.1882352941);
+  box-shadow: 0px 0px 100vw 300px rgba(140, 67, 255, 0.5019607843);
 }/*# sourceMappingURL=style.css.map */

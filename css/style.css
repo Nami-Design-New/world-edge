@@ -512,7 +512,7 @@ header nav .navMenu .navLink:first-child {
     top: 0px;
     width: 100%;
     height: 100vh;
-    padding: 100px 0 40px;
+    padding: 100px 20px 40px;
     flex-direction: column;
     justify-content: start;
     background-color: var(--darkColor);
@@ -595,51 +595,26 @@ header nav .navBtn.active span:last-child {
 }
 header .more {
   position: relative;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (min-width: 1200px) {
-  header .more {
-    display: flex;
-  }
 }
 header .more .linksBtn {
   position: relative;
   display: flex;
-  flex-direction: column;
   gap: 6px;
-  align-items: end;
-  justify-content: center;
-  padding: 4px;
+  align-items: center;
+  padding: 12px 16px;
   cursor: pointer;
   transition: var(--transition);
   min-width: 30px;
   width: -moz-fit-content;
   width: fit-content;
+  color: var(--whiteColor);
+  text-transform: uppercase;
 }
-header .more .linksBtn span {
-  background-color: #cdcace;
-  width: 30px;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-5px);
-  transition: var(--transition);
-}
-header .more .linksBtn span:last-child {
-  width: 20px;
-  transform: translateY(5px);
-}
-header .more .linksBtn.show span {
-  transform-origin: center;
-  transform: rotate(45deg);
-  width: 20px;
-}
-header .more .linksBtn.show span:last-child {
-  width: 20px;
-  transform: rotate(-45deg);
+header .more .linksBtn i {
+  color: var(--thirdColor);
 }
 header .more .linksMenu {
   position: absolute;
@@ -656,13 +631,14 @@ header .more .linksMenu {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition);
+  width: 100%;
 }
 header .more .linksMenu a {
   white-space: nowrap;
   color: var(--whiteColor);
 }
 header .more .linksMenu.show {
-  top: 100%;
+  top: calc(100% + 8px);
   opacity: 1;
   visibility: visible;
 }
@@ -677,14 +653,58 @@ header .more .linksMenu.show {
   padding: 5px;
 }
 
+.Vtext {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  color: var(--whiteColor);
+  writing-mode: vertical-rl;
+  height: auto;
+  transform: translateY(-50%) rotate(180deg);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Vtext::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 12px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--grayColor);
+  z-index: -2;
+}
+.Vtext span {
+  padding: 20px 0;
+  background-color: rgba(31, 31, 31, 0);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+}
+.Vtext.side {
+  left: unset;
+  right: 4px;
+  transform: translateY(-50%);
+}
+.Vtext.side::before {
+  right: 12px;
+  left: unset;
+}
+
 .mainSection {
   height: calc(100vh - 80px);
   position: relative;
+}
+.mainSection .inner {
+  width: min(100% - 0px, 1400px);
+  margin: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 150px;
+  padding: 100px 12px 0;
+  position: relative;
+  height: 100%;
 }
-.mainSection .title {
+.mainSection .inner .title {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--whiteColor);
@@ -692,8 +712,20 @@ header .more .linksMenu.show {
   font-size: 60px;
 }
 @media (max-width: 1200px) {
-  .mainSection .title {
+  .mainSection .inner .title {
     font-size: 35px;
+  }
+}
+.mainSection .inner .hint {
+  color: #d6d6d6;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+  .mainSection .inner .hint {
+    font-size: 20px;
   }
 }
 .mainSection::after {

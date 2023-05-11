@@ -43,6 +43,26 @@ $(document).ready(function () {
       $(".pageHeader").removeClass("headerAnimate");
     }
   });
+
+  //videoSlider
+  var videoSlider = new Swiper(".videoSliderContainer", {
+    spaceBetween: 0,
+    // loop: true,
+    // effect: "fade",
+    speed: 500,
+    // autoplay: {
+    //   delay: 8000,
+    //   disableOnInteraction: false,
+    // },
+    pagination: {
+      el: ".videoSliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".videoSliderNext",
+      prevEl: ".videoSliderPrev",
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

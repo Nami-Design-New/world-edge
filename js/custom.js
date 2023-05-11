@@ -44,6 +44,24 @@ $(document).ready(function () {
     }
   });
 
+  $(" .blogs .blog .description ").each(function () {
+    var text = $(this).text();
+    if (text.length > 180) {
+      var truncatedText =
+        $.trim(text).substring(0, 180).split(" ").slice(0, -1).join(" ") +
+        "...";
+      $(this).text(truncatedText);
+    }
+  });
+  $(" .blogs .blog .title ").each(function () {
+    var text = $(this).text();
+    if (text.length > 45) {
+      var truncatedText =
+        $.trim(text).substring(0, 45).split(" ").slice(0, -1).join(" ") + "...";
+      $(this).text(truncatedText);
+    }
+  });
+
   //videoSlider
   var videoSlider = new Swiper(".videoSliderContainer", {
     spaceBetween: 0,
@@ -61,6 +79,35 @@ $(document).ready(function () {
     navigation: {
       nextEl: ".videoSliderNext",
       prevEl: ".videoSliderPrev",
+    },
+  });
+
+  //products Slider
+  var blogSlider = new Swiper(".blogSlider", {
+    pagination: {
+      el: ".blogPagination",
+      clickable: true,
+    },
+
+    // centeredSlides: true,
+    // loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
     },
   });
 });

@@ -338,7 +338,7 @@ button {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: var(--whiteColor);
+  background-color: #000;
   transition: transform 1.2s 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: translateX(0%);
 }
@@ -457,7 +457,7 @@ header {
   }
 }
 header nav {
-  width: min(100% - 48px, 1400px);
+  width: min(100% - 48px, 1360px);
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -724,16 +724,108 @@ header .more .linksMenu.show {
   box-shadow: 0px 4px rgba(0, 0, 0, 0.1882352941);
 }
 
+.swiperControl {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .swiperControl {
+    position: relative;
+  }
+}
+.swiperControl .swiperBtns {
+  display: flex;
+  gap: 8px;
+}
+.swiperControl .swiperBtns .swiper-button-next,
+.swiperControl .swiperBtns .swiper-button-prev {
+  position: relative;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+  margin: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--whiteColor);
+  border-radius: 100%;
+  transition: var(--transition);
+  opacity: 0.8;
+}
+.swiperControl .swiperBtns .swiper-button-next::after,
+.swiperControl .swiperBtns .swiper-button-prev::after {
+  font-size: 32px;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 200;
+}
+@media (max-width: 768px) {
+  .swiperControl .swiperBtns .swiper-button-next::after,
+  .swiperControl .swiperBtns .swiper-button-prev::after {
+    font-size: 24px;
+  }
+}
+.swiperControl .swiperBtns .swiper-button-next:hover,
+.swiperControl .swiperBtns .swiper-button-prev:hover {
+  opacity: 1;
+  background-color: white;
+  color: var(--secondColor);
+}
+.swiperControl .swiperBtns .swiper-button-next.swiper-button-disabled,
+.swiperControl .swiperBtns .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.2;
+}
+.swiperControl .swiperBtns .swiper-button-next {
+  left: unset;
+}
+.swiperControl .swiperBtns .swiper-button-next::after {
+  content: "\f105" !important;
+}
+.swiperControl .swiperBtns .swiper-button-prev::after {
+  content: "\f105" !important;
+  transform: scaleX(-1);
+}
+.swiperControl .swiper-pagination {
+  position: relative;
+  min-height: 16px;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+  margin: unset;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.swiperControl .swiper-pagination .swiper-pagination-bullet {
+  background-color: white;
+  transition: var(--transition);
+  border-radius: 16px;
+}
+.swiperControl .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+}
+
 .mainSection {
   position: relative;
   display: flex;
   justify-content: center;
 }
 .mainSection .inner {
-  width: min(100% - 0px, 1400px);
+  width: min(100% - 0px, 1360px);
   display: flex;
   flex-direction: column;
-  padding: 80px 20px 0px;
+  padding: 80px 28px 0px;
   position: relative;
   gap: 48px;
 }
@@ -822,7 +914,7 @@ header .more .linksMenu.show {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.7176470588), #1f1f1f);
+  background: linear-gradient(rgba(31, 31, 31, 0.1568627451), rgba(31, 31, 31, 0.7176470588), #1f1f1f);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -883,96 +975,6 @@ header .more .linksMenu.show {
     transform: translateZ(0);
   }
 }
-.mainSection .videoSlider .swiperControl {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 20px;
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-@media (max-width: 1200px) {
-  .mainSection .videoSlider .swiperControl {
-    position: relative;
-  }
-}
-.mainSection .videoSlider .swiperControl .swiperBtns {
-  display: flex;
-  gap: 8px;
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next,
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-prev {
-  position: relative;
-  left: unset;
-  right: unset;
-  top: unset;
-  bottom: unset;
-  margin: unset;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--whiteColor);
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--whiteColor);
-  border-radius: 100%;
-  transition: var(--transition);
-  opacity: 0.8;
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next::after,
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-prev::after {
-  font-size: 32px;
-  font-family: "Font Awesome 6 Pro";
-  font-weight: 200;
-}
-@media (max-width: 768px) {
-  .mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next::after,
-  .mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-prev::after {
-    font-size: 24px;
-  }
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next:hover,
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-prev:hover {
-  opacity: 1;
-  background-color: white;
-  color: var(--secondColor);
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next.swiper-button-disabled,
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-prev.swiper-button-disabled {
-  opacity: 0.2;
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next {
-  left: unset;
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-next::after {
-  content: "\f105" !important;
-}
-.mainSection .videoSlider .swiperControl .swiperBtns .swiper-button-prev::after {
-  content: "\f105" !important;
-  transform: scaleX(-1);
-}
-.mainSection .videoSlider .swiperControl .swiper-pagination {
-  position: relative;
-  left: unset;
-  right: unset;
-  top: unset;
-  bottom: unset;
-  margin: unset;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.mainSection .videoSlider .swiperControl .swiper-pagination .swiper-pagination-bullet {
-  background-color: white;
-  transition: var(--transition);
-  border-radius: 16px;
-}
-.mainSection .videoSlider .swiperControl .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  width: 16px;
-  height: 16px;
-}
 .mainSection::after {
   content: "";
   width: 1px;
@@ -998,6 +1000,7 @@ header .more .linksMenu.show {
   border: none;
   background: none;
   isolation: isolate;
+  text-transform: capitalize;
 }
 .animatedLink i {
   display: inline-flex;
@@ -1040,4 +1043,99 @@ header .more .linksMenu.show {
 .animatedLink.white:hover i span {
   border: 1px solid var(--darkColor);
   background-color: var(--darkColor);
+}
+
+.blogs {
+  padding: 120px 0;
+}
+.blogs .sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+.blogs .sectionTitle h2 {
+  color: var(--whiteColor);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.blogs .sectionTitle h2 span {
+  color: var(--mainColor);
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 4px;
+}
+.blogs .sectionTitle h2 span::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--mainColor);
+}
+.blogs .sectionTitle h2 span::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--mainColor);
+}
+.blogs .blog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+}
+.blogs .blog img {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.blogs .blog .data {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.blogs .blog .date {
+  font-style: italic;
+  color: var(--grayColor);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: var(--transition);
+}
+.blogs .blog .date i {
+  color: var(--grayColor);
+  font-size: 16px;
+  font-style: italic;
+  transition: var(--transition);
+}
+.blogs .blog .title {
+  color: var(--lightGrayColor);
+  transition: var(--transition);
+}
+.blogs .blog .description {
+  color: var(--grayColor);
+}
+.blogs .blog:hover {
+  transform: translateY(-5px);
+}
+.blogs .blog:hover .title {
+  color: var(--mainColor);
+}
+.blogs .blog:hover .date {
+  color: var(--whiteColor);
+}
+.blogs .blog:hover .date i {
+  color: var(--whiteColor);
+}
+.blogs .swiperControl {
+  position: relative;
+}
+.blogs .swiperControl .swiper-pagination {
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

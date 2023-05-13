@@ -449,13 +449,6 @@ header {
   transition: background 0.3s ease-in-out;
   background-color: transparent;
 }
-@media (max-width: 1200px) {
-  header {
-    background-color: rgba(31, 31, 31, 0.5019607843);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-  }
-}
 header nav {
   width: min(100% - 48px, 1360px);
   display: flex;

@@ -556,10 +556,10 @@ header {
   z-index: 1024;
   transition: background 0.3s ease-in-out;
   background-color: transparent;
-  @media (max-width: 1200px) {
-    background-color: #1f1f1f80;
-    backdrop-filter: blur(8px);
-  }
+  // @media (max-width: 1200px) {
+  //   background-color: #1f1f1f80;
+  //   backdrop-filter: blur(8px);
+  // }
   nav {
     width: min(100% - 48px, 1360px);
     display: flex;

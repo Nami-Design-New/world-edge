@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
   });
 
-  $(" .blogs .blog .description ").each(function () {
+  $(" .blogs .blog .description  , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint").each(function () {
     var text = $(this).text();
     if (text.length > 180) {
       var truncatedText =

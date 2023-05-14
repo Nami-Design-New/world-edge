@@ -1136,7 +1136,7 @@ header .more .linksMenu.show {
 }
 
 .tips {
-  padding: 80px 0;
+  padding: 120px 0;
   background-color: #131313;
 }
 .tips .sectionTitle {
@@ -1226,10 +1226,18 @@ header .more .linksMenu.show {
     font-size: calc(1.25rem - 0.3vw);
   }
   h6 {
-    font-size: calc(1rem - 0.3vw);
+    font-size: calc(1rem - 0.5vw);
   }
   body,
   p {
-    font-size: calc(1rem - 0.3vw);
+    font-size: calc(1rem - 0.5vw);
   }
+}
+.fancybox__content {
+  outline: none !important;
+  border: none !important;
+}
+.fancybox__content video {
+  outline: none !important;
+  border: none !important;
 }/*# sourceMappingURL=style.css.map */

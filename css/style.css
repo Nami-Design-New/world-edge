@@ -1042,10 +1042,9 @@ header .more .linksMenu.show {
   color: var(--whiteColor);
 }
 .animatedLink.white i span {
-  border: 1px solid var(--whiteColor);
+  border: 1px solid var(--grayColor);
 }
 .animatedLink.white:hover i span {
-  border: 1px solid var(--darkColor);
   background-color: var(--darkColor);
 }
 
@@ -1155,33 +1154,32 @@ header .more .linksMenu.show {
   background: rgba(0, 0, 0, 0.1882352941);
   background-size: cover;
   position: relative;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  overflow: hidden;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 .tips::after {
   content: "";
   width: 1px;
   aspect-ratio: 1/1;
   position: absolute;
-  right: 20%;
+  right: 0%;
   top: 20%;
   border-radius: 100%;
   z-index: -2;
   background-color: rgba(35, 33, 142, 0.1882352941);
-  box-shadow: 0px 0px 100vw 300px rgba(35, 33, 142, 0.7058823529);
+  box-shadow: 0px 0px 100vh 200px rgba(35, 33, 142, 0.8784313725);
 }
 .tips::before {
   content: "";
   width: 1px;
   aspect-ratio: 1/1;
   position: absolute;
-  left: 20%;
+  left: 0%;
   bottom: 20%;
   border-radius: 100%;
   z-index: -2;
   background-color: rgba(140, 67, 255, 0.1882352941);
-  box-shadow: 0px 0px 100vw 300px rgba(139, 67, 255, 0.3137254902);
+  box-shadow: 0px 0px 100vh 200px rgba(139, 67, 255, 0.5607843137);
 }
 .tips .sectionTitle {
   flex-direction: column;

@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
   });
 
-  $(" .blogs .blog .description  , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint").each(function () {
+  $(" .blogs .blog .description  , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint ").each(function () {
     var text = $(this).text();
     if (text.length > 180) {
       var truncatedText =
@@ -58,6 +58,14 @@ $(document).ready(function () {
     if (text.length > 45) {
       var truncatedText =
         $.trim(text).substring(0, 45).split(" ").slice(0, -1).join(" ") + "...";
+      $(this).text(truncatedText);
+    }
+  });
+  $(" .production .inner .world .data p").each(function () {
+    var text = $(this).text();
+    if (text.length > 300) {
+      var truncatedText =
+        $.trim(text).substring(0, 300).split(" ").slice(0, -1).join(" ") + "...";
       $(this).text(truncatedText);
     }
   });

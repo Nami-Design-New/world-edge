@@ -1152,8 +1152,36 @@ header .more .linksMenu.show {
 
 .tips {
   padding: 120px 0;
-  background-image: radial-gradient(rgba(19, 19, 19, 0.9058823529), #131313), url(../img/bg.avif);
+  background: rgba(0, 0, 0, 0.1882352941);
   background-size: cover;
+  position: relative;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+.tips::after {
+  content: "";
+  width: 1px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  right: 20%;
+  top: 20%;
+  border-radius: 100%;
+  z-index: -2;
+  background-color: rgba(35, 33, 142, 0.1882352941);
+  box-shadow: 0px 0px 100vw 300px rgba(35, 33, 142, 0.7058823529);
+}
+.tips::before {
+  content: "";
+  width: 1px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
+  border-radius: 100%;
+  z-index: -2;
+  background-color: rgba(140, 67, 255, 0.1882352941);
+  box-shadow: 0px 0px 100vw 300px rgba(139, 67, 255, 0.3137254902);
 }
 .tips .sectionTitle {
   flex-direction: column;
@@ -1421,8 +1449,7 @@ header .more .linksMenu.show {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   transition: var(--transition);
@@ -1430,9 +1457,6 @@ header .more .linksMenu.show {
   color: var(--whiteColor);
   text-transform: uppercase;
   padding: 24px;
-}
-.production .inner .seeMore i {
-  font-size: 30px;
 }
 .production .inner .world {
   display: flex;

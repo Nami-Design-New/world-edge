@@ -1496,7 +1496,7 @@ header .more .linksMenu.show {
 }
 
 .partners {
-  padding: 100px 0 60px;
+  padding: 100px 0 20px;
   background-image: linear-gradient(60deg, rgba(35, 33, 142, 0.1764705882), rgba(35, 33, 142, 0.3960784314));
   background-attachment: fixed;
   background-size: cover;
@@ -1507,7 +1507,7 @@ header .more .linksMenu.show {
   padding-bottom: 10px;
 }
 .partners .top {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   text-align: center;
 }
 .partners .top .title {
@@ -1560,7 +1560,7 @@ header .more .linksMenu.show {
 }
 .partners .swiperControl {
   position: relative;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 .partners .swiperControl .swiper-pagination {
   justify-content: center;

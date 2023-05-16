@@ -1379,8 +1379,19 @@ header {
     background-position: center;
     background-size: cover;
     padding: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     min-height: 150px;
+
+
+    .title {
+      font-weight: bold;
+      color: var(--lightGrayColor);
+      font-size: 36px !important;
+      text-transform: capitalize;
+      @media (max-width: 768px) {
+        font-size: 24px !important;
+      }
+    }
   }
   .inner {
     display: flex;
@@ -1649,7 +1660,7 @@ footer {
     .title {
       font-weight: bold;
       text-transform: uppercase;
-      font-size: 60px;
+      font-size: 50px;
       margin-bottom: 40px;
       @media (max-width: 768px) {
         font-size: 40px;
@@ -1684,13 +1695,15 @@ footer {
     form {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 8px;
       align-items: end;
       .form-control {
         border: none;
         background: #00000030;
         border-radius: 0;
         color: var(--whiteColor);
+        min-height: 64px;
+        padding: 16px;
       }
       .btn {
         display: flex;

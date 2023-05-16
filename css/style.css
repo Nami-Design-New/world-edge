@@ -1293,8 +1293,19 @@ header .more .linksMenu.show {
   background-position: center;
   background-size: cover;
   padding: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   min-height: 150px;
+}
+.production .sectionTitle .title {
+  font-weight: bold;
+  color: var(--lightGrayColor);
+  font-size: 36px !important;
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  .production .sectionTitle .title {
+    font-size: 24px !important;
+  }
 }
 .production .inner {
   display: flex;
@@ -1575,7 +1586,7 @@ footer .contactUs {
 footer .contactUs .title {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 40px;
 }
 @media (max-width: 768px) {
@@ -1611,7 +1622,7 @@ footer .contactUs .info .link i {
 footer .contactUs form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   align-items: end;
 }
 footer .contactUs form .form-control {
@@ -1619,6 +1630,8 @@ footer .contactUs form .form-control {
   background: rgba(0, 0, 0, 0.1882352941);
   border-radius: 0;
   color: var(--whiteColor);
+  min-height: 64px;
+  padding: 16px;
 }
 footer .contactUs form .btn {
   display: flex;

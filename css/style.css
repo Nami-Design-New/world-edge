@@ -1564,4 +1564,101 @@ header .more .linksMenu.show {
 }
 .partners .swiperControl .swiper-pagination {
   justify-content: center;
+}
+
+footer {
+  background-color: var(--darkColor);
+}
+footer .contactUs {
+  padding: 160px 0 40px;
+}
+footer .contactUs .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  footer .contactUs .title {
+    font-size: 40px;
+  }
+}
+footer .contactUs .info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+footer .contactUs .info .link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--lightGrayColor);
+}
+footer .contactUs .info .link:hover {
+  color: var(--mainColor);
+}
+footer .contactUs .info .link i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+footer .contactUs form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: end;
+}
+footer .contactUs form .form-control {
+  border: none;
+  background: rgba(0, 0, 0, 0.1882352941);
+  border-radius: 0;
+  color: var(--whiteColor);
+}
+footer .contactUs form .btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #000;
+  color: var(--whiteColor);
+  border-radius: 0;
+  transition: var(--transition);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+footer .contactUs form .btn:hover {
+  background: var(--mainColor);
+  gap: 16px;
+}
+footer .copyright {
+  width: min(100% - 48px, 1320px);
+  margin: auto;
+  padding: 32px 0;
+  display: flex;
+  gap: 16px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 687px) {
+  footer .copyright {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+footer .copyright .logo {
+  height: 40px;
+  filter: brightness(0) invert(1);
+  margin-right: 24px;
+}
+footer .copyright .company {
+  color: var(--mainColor);
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */

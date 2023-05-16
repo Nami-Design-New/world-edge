@@ -1642,3 +1642,96 @@ header {
     }
   }
 }
+footer {
+  background-color: var(--darkColor);
+  .contactUs {
+    padding: 160px 0 40px;
+    .title {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 60px;
+      margin-bottom: 40px;
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+      .link {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        width: fit-content;
+        color: var(--lightGrayColor);
+
+        &:hover {
+          color: var(--mainColor);
+        }
+
+        i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 48px;
+          height: 48px;
+          font-size: 24px;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: end;
+      .form-control {
+        border: none;
+        background: #00000030;
+        border-radius: 0;
+        color: var(--whiteColor);
+      }
+      .btn {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 16px 32px;
+        background-color: #000;
+        color: var(--whiteColor);
+        border-radius: 0;
+        transition: var(--transition);
+        font-size: 16px;
+        text-transform: capitalize;
+        &:hover {
+          background: var(--mainColor);
+          gap: 16px;
+        }
+      }
+    }
+  }
+  .copyright {
+    width: min(100% - 48px, 1320px);
+    margin: auto;
+    padding: 32px 0;
+    display: flex;
+    gap: 16px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 687px) {
+      justify-content: center;
+      flex-direction: column;
+    }
+    .logo {
+      height: 40px;
+      filter: brightness(0) invert(1);
+      margin-right: 24px;
+    }
+    .company {
+      color: var(--mainColor);
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1371,7 +1371,8 @@ header {
   }
 }
 .production {
-  padding: 160px 0;
+  padding: 100px 0;
+  transition: var(--transition);
   .sectionTitle {
     background-image: linear-gradient(#000000b0, #0000009f),
       url(../img/bg2.avif);
@@ -1569,6 +1570,75 @@ header {
           color: var(--grayColor);
         }
       }
+    }
+  }
+}
+.partners {
+  padding: 100px 0 60px;
+  background-image: linear-gradient(60deg, #23218e2d, #23218e65);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .sectionTitle {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .top {
+    margin-bottom: 24px;
+    text-align: center;
+    .title {
+      font-weight: bold;
+      color: var(--whiteColor);
+      margin-bottom: 16px;
+      font-size: 36px !important;
+      @media (max-width: 768px) {
+        font-size: 24px !important;
+      }
+    }
+    .hint {
+      color: var(--lightGrayColor);
+      width: min(100% - 40px, 800px);
+      margin: auto;
+    }
+  }
+  .referenceLogo {
+    height: 150px;
+    padding: 10px 20px;
+    position: relative;
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0%;
+      background-color: var(--whiteColor);
+      transition: var(--transition);
+      z-index: -1;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      transition: var(--transition);
+    }
+    &:hover {
+      &::after {
+        content: "";
+        height: 100%;
+      }
+      img {
+        filter: none;
+      }
+    }
+  }
+  .swiperControl {
+    position: relative;
+    padding-top: 40px;
+    .swiper-pagination {
+      justify-content: center;
     }
   }
 }

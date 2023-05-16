@@ -44,7 +44,9 @@ $(document).ready(function () {
     }
   });
 
-  $(" .blogs .blog .description  , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint ").each(function () {
+  $(
+    " .blogs .blog .description  , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint "
+  ).each(function () {
     var text = $(this).text();
     if (text.length > 180) {
       var truncatedText =
@@ -65,7 +67,8 @@ $(document).ready(function () {
     var text = $(this).text();
     if (text.length > 300) {
       var truncatedText =
-        $.trim(text).substring(0, 300).split(" ").slice(0, -1).join(" ") + "...";
+        $.trim(text).substring(0, 300).split(" ").slice(0, -1).join(" ") +
+        "...";
       $(this).text(truncatedText);
     }
   });
@@ -115,6 +118,36 @@ $(document).ready(function () {
       },
       991: {
         slidesPerView: 3,
+      },
+    },
+  });
+  //partnersSlider Slider
+  var partnersSlider = new Swiper(".partnersSlider", {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    pagination: {
+      el: ".partnersPagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+      1400: {
+        slidesPerView: 5,
       },
     },
   });

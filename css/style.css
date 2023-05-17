@@ -1736,7 +1736,7 @@ footer .copyright .company {
   cursor: default;
   color: var(--grayColor);
 }
-.banner h1 {
+.banner h2 {
   font-weight: bold;
   color: var(--whiteColor);
   text-transform: capitalize;
@@ -1749,6 +1749,11 @@ footer .copyright .company {
   background-color: #191919;
   box-shadow: -20px 20px 0px rgba(0, 0, 0, 0.5);
   padding: 24px;
+}
+@media (max-width: 768px) {
+  .casting form {
+    box-shadow: -5px 10px 0px rgba(0, 0, 0, 0.5);
+  }
 }
 .casting form .title {
   font-weight: bold;
@@ -1803,6 +1808,11 @@ footer .copyright .company {
   background: var(--mainColor);
   gap: 16px;
 }
+.casting form .hint {
+  font-size: 14px;
+  color: var(--grayColor);
+  text-align: center;
+}
 
 .select2-container--default .select2-selection--single {
   background-color: #242424;
@@ -1831,4 +1841,28 @@ footer .copyright .company {
 .filepond--panel-center,
 .filepond--drop-label {
   background-color: #242424;
+}
+
+.privacyPolicy {
+  padding: 50px 0;
+}
+.privacyPolicy .inner {
+  background-color: #191919;
+  box-shadow: -20px 20px 0px rgba(0, 0, 0, 0.5);
+  color: var(--lightGrayColor);
+  padding: 24px;
+}
+@media (max-width: 768px) {
+  .privacyPolicy .inner {
+    box-shadow: -5px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+.privacyPolicy .inner h1, .privacyPolicy .inner h2, .privacyPolicy .inner h3, .privacyPolicy .inner h4, .privacyPolicy .inner h5, .privacyPolicy .inner h6 {
+  padding: 40px 0 10px;
+  font-weight: bold;
+}
+.privacyPolicy .inner p {
+  color: var(--lightGrayColor);
+  margin-bottom: 12px;
+  font-size: small;
 }/*# sourceMappingURL=style.css.map */

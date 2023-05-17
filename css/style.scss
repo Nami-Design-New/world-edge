@@ -1814,7 +1814,7 @@ footer {
       }
     }
   }
-  h1 {
+  h2 {
     font-weight: bold;
     color: var(--whiteColor);
     text-transform: capitalize;
@@ -1826,6 +1826,9 @@ footer {
   form {
     background-color: #191919;
     box-shadow: -20px 20px 0px rgb(0 0 0 / 50%);
+    @media (max-width: 768px) {
+      box-shadow: -5px 10px 0px rgb(0 0 0 / 50%);
+    }
     padding: 24px;
     .title {
       font-weight: bold;
@@ -1881,6 +1884,13 @@ footer {
         gap: 16px;
       }
     }
+
+    .hint {
+      font-size: 14px;
+      color: var(--grayColor);
+      text-align: center;
+    
+    }
   }
 }
 
@@ -1908,4 +1918,28 @@ footer {
 .filepond--panel-center,
 .filepond--drop-label {
   background-color: #242424;
+}
+
+
+.privacyPolicy{
+  padding: 50px 0;
+
+  .inner{
+    background-color: #191919;
+    box-shadow: -20px 20px 0px rgb(0 0 0 / 50%);
+    color: var(--lightGrayColor);
+    @media (max-width: 768px) {
+      box-shadow: -5px 10px 0px rgb(0 0 0 / 50%);
+    }
+    padding: 24px;
+    h1,h2,h3,h4,h5,h6{
+      padding: 40px 0 10px;
+      font-weight: bold;
+    }
+    p{
+      color: var(--lightGrayColor);
+      margin-bottom: 12px;
+      font-size: small;
+    }
+  }
 }

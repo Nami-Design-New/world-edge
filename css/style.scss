@@ -291,6 +291,12 @@ button {
     padding: 8px 16px !important;
   }
 }
+
+content {
+  min-height: 13.29vh;
+  display: flex;
+  flex-direction: column;
+}
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -722,7 +728,7 @@ header {
       right: 0%;
       top: calc(100% + 100px);
       z-index: 2;
-      background-color: #00000040;
+      background-color: #141414;
       backdrop-filter: blur(8px);
       padding: 20px 24px;
       display: flex;
@@ -1086,6 +1092,7 @@ header {
   isolation: isolate;
   text-transform: capitalize;
   white-space: nowrap;
+  gap: 8px;
   i {
     display: inline-flex;
     justify-content: center;
@@ -1191,22 +1198,23 @@ header {
       gap: 12px;
     }
     .date {
-      font-style: italic;
+      // font-style: italic;
       color: var(--grayColor);
       display: flex;
       gap: 8px;
       align-items: center;
       transition: var(--transition);
+      margin-top: auto;
       i {
         color: var(--grayColor);
         font-size: 16px;
-        font-style: italic;
         transition: var(--transition);
       }
     }
     .title {
       color: var(--lightGrayColor);
       transition: var(--transition);
+      font-weight: bold;
     }
     .description {
       // margin-top: auto;
@@ -1220,7 +1228,7 @@ header {
         color: var(--mainColor);
       }
       .date {
-        color: var(--whiteColor);
+        // color: var(--whiteColor);
         i {
           color: var(--whiteColor);
         }
@@ -1237,10 +1245,10 @@ header {
 .tips {
   padding: 120px 0;
   // background-image: radial-gradient(#131313e7, #131313), url(../img/bg.avif);
-  background: #00000030;
-  background-size: cover;
+  background: #0000007a;
+  // background-size: cover;
   position: relative;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(2px);
   // overflow: hidden;
   &::after {
     content: "";
@@ -1373,6 +1381,8 @@ header {
 .production {
   padding: 100px 0;
   transition: var(--transition);
+  background: #0000007a;
+
   .sectionTitle {
     background-image: linear-gradient(#000000b0, #0000009f),
       url(../img/bg2.avif);
@@ -1381,7 +1391,6 @@ header {
     padding: 24px;
     margin-bottom: 24px;
     min-height: 150px;
-
 
     .title {
       font-weight: bold;
@@ -1408,7 +1417,7 @@ header {
         flex-direction: row;
       }
       .nav-link {
-        background-color: #131313;
+        background-color: #000000;
         padding: 12px 32px;
         min-height: 120px;
         color: var(--grayColor);
@@ -1655,6 +1664,8 @@ header {
 }
 footer {
   background-color: var(--darkColor);
+  box-shadow: 0px -13px 20px rgb(0 0 0 / 10%);
+
   .contactUs {
     padding: 160px 0 40px;
     .title {
@@ -1747,4 +1758,154 @@ footer {
       text-transform: capitalize;
     }
   }
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+.loadMore {
+  display: flex;
+  justify-content: center;
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.banner {
+  background-image: linear-gradient(#1f1f1fc9, #1f1f1fbe), url(../img/bg2.avif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 250px 0 50px;
+  position: relative;
+  display: flex;
+  margin-top: -100px;
+  @media (max-width: 768px) {
+    padding: 200px 0 30px;
+  }
+  .links {
+    a {
+      padding: 4px;
+      position: relative;
+      color: var(--whiteColor);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: capitalize;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      &::after {
+        content: " ↣ ";
+      }
+      &.active {
+        cursor: default;
+        color: var(--grayColor);
+      }
+    }
+  }
+  h1 {
+    font-weight: bold;
+    color: var(--whiteColor);
+    text-transform: capitalize;
+  }
+}
+
+.casting {
+  padding: 50px 0;
+  form {
+    background-color: #191919;
+    box-shadow: -20px 20px 0px rgb(0 0 0 / 50%);
+    padding: 24px;
+    .title {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 30px;
+      margin-bottom: 40px;
+      padding-top: 24px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 30%;
+        background-color: var(--mainColor);
+        height: 2px;
+        display: flex;
+        margin-top: 5px;
+      }
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    label {
+      color: var(--lightGrayColor);
+      text-transform: capitalize;
+      padding-bottom: 8px;
+      font-size: 12px;
+      // font-weight: bold;
+    }
+
+    .form-control {
+      border: none;
+      background-color: #242424;
+      border-radius: 0;
+      color: var(--lightGrayColor);
+      min-height: 56px;
+      padding: 16px;
+      font-size: 14px;
+    }
+    [type="submit"] {
+      margin: auto;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #000;
+      color: var(--whiteColor);
+      border-radius: 0;
+      transition: var(--transition);
+      font-size: 16px;
+      text-transform: capitalize;
+      &:hover {
+        background: var(--mainColor);
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: #242424;
+  border: none;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: var(--lightGrayColor);
+}
+.select2-dropdown {
+  color: var(--lightGrayColor);
+  background-color: #000;
+}
+.select2-container--default .select2-results__option--selected {
+  background-color: var(--mainColor);
+}
+.filepond--drip {
+  background-color: #242424;
+  opacity: 1;
+}
+.filepond--panel-bottom,
+.filepond--panel-center,
+.filepond--drop-label {
+  background-color: #242424;
 }

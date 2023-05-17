@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mainColor: #8c43ff;
   --mainColor10: #f7f2ff;
@@ -327,6 +328,12 @@ button {
   padding: 8px 16px !important;
 }
 
+content {
+  min-height: 13.29vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .lazyDiv {
   position: relative;
   overflow: hidden;
@@ -615,7 +622,7 @@ header .more .linksMenu {
   right: 0%;
   top: calc(100% + 100px);
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.2509803922);
+  background-color: #141414;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   padding: 20px 24px;
@@ -1005,6 +1012,7 @@ header .more .linksMenu.show {
   isolation: isolate;
   text-transform: capitalize;
   white-space: nowrap;
+  gap: 8px;
 }
 .animatedLink i {
   display: inline-flex;
@@ -1110,22 +1118,22 @@ header .more .linksMenu.show {
   gap: 12px;
 }
 .blogs .blog .date {
-  font-style: italic;
   color: var(--grayColor);
   display: flex;
   gap: 8px;
   align-items: center;
   transition: var(--transition);
+  margin-top: auto;
 }
 .blogs .blog .date i {
   color: var(--grayColor);
   font-size: 16px;
-  font-style: italic;
   transition: var(--transition);
 }
 .blogs .blog .title {
   color: var(--lightGrayColor);
   transition: var(--transition);
+  font-weight: bold;
 }
 .blogs .blog .description {
   color: var(--grayColor);
@@ -1135,9 +1143,6 @@ header .more .linksMenu.show {
 }
 .blogs .blog:hover .title {
   color: var(--mainColor);
-}
-.blogs .blog:hover .date {
-  color: var(--whiteColor);
 }
 .blogs .blog:hover .date i {
   color: var(--whiteColor);
@@ -1151,11 +1156,10 @@ header .more .linksMenu.show {
 
 .tips {
   padding: 120px 0;
-  background: rgba(0, 0, 0, 0.1882352941);
-  background-size: cover;
+  background: rgba(0, 0, 0, 0.4784313725);
   position: relative;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 .tips::after {
   content: "";
@@ -1287,6 +1291,7 @@ header .more .linksMenu.show {
 .production {
   padding: 100px 0;
   transition: var(--transition);
+  background: rgba(0, 0, 0, 0.4784313725);
 }
 .production .sectionTitle {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6901960784), rgba(0, 0, 0, 0.6235294118)), url(../img/bg2.avif);
@@ -1328,7 +1333,7 @@ header .more .linksMenu.show {
   }
 }
 .production .inner .nav .nav-link {
-  background-color: #131313;
+  background-color: #000000;
   padding: 12px 32px;
   min-height: 120px;
   color: var(--grayColor);
@@ -1579,6 +1584,7 @@ header .more .linksMenu.show {
 
 footer {
   background-color: var(--darkColor);
+  box-shadow: 0px -13px 20px rgba(0, 0, 0, 0.1);
 }
 footer .contactUs {
   padding: 160px 0 40px;
@@ -1674,4 +1680,155 @@ footer .copyright .logo {
 footer .copyright .company {
   color: var(--mainColor);
   text-transform: capitalize;
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+}
+.loadMore .spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.banner {
+  background-image: linear-gradient(rgba(31, 31, 31, 0.7882352941), rgba(31, 31, 31, 0.7450980392)), url(../img/bg2.avif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 250px 0 50px;
+  position: relative;
+  display: flex;
+  margin-top: -100px;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 200px 0 30px;
+  }
+}
+.banner .links a {
+  padding: 4px;
+  position: relative;
+  color: var(--whiteColor);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: capitalize;
+}
+.banner .links a:last-child::after {
+  display: none;
+}
+.banner .links a::after {
+  content: " ↣ ";
+}
+.banner .links a.active {
+  cursor: default;
+  color: var(--grayColor);
+}
+.banner h1 {
+  font-weight: bold;
+  color: var(--whiteColor);
+  text-transform: capitalize;
+}
+
+.casting {
+  padding: 50px 0;
+}
+.casting form {
+  background-color: #191919;
+  box-shadow: -20px 20px 0px rgba(0, 0, 0, 0.5);
+  padding: 24px;
+}
+.casting form .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 40px;
+  padding-top: 24px;
+  position: relative;
+}
+.casting form .title::after {
+  content: "";
+  width: 30%;
+  background-color: var(--mainColor);
+  height: 2px;
+  display: flex;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .casting form .title {
+    font-size: 22px;
+  }
+}
+.casting form label {
+  color: var(--lightGrayColor);
+  text-transform: capitalize;
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+.casting form .form-control {
+  border: none;
+  background-color: #242424;
+  border-radius: 0;
+  color: var(--lightGrayColor);
+  min-height: 56px;
+  padding: 16px;
+  font-size: 14px;
+}
+.casting form [type=submit] {
+  margin: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #000;
+  color: var(--whiteColor);
+  border-radius: 0;
+  transition: var(--transition);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.casting form [type=submit]:hover {
+  background: var(--mainColor);
+  gap: 16px;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: #242424;
+  border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--lightGrayColor);
+}
+
+.select2-dropdown {
+  color: var(--lightGrayColor);
+  background-color: #000;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: var(--mainColor);
+}
+
+.filepond--drip {
+  background-color: #242424;
+  opacity: 1;
+}
+
+.filepond--panel-bottom,
+.filepond--panel-center,
+.filepond--drop-label {
+  background-color: #242424;
 }/*# sourceMappingURL=style.css.map */

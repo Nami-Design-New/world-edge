@@ -45,12 +45,12 @@ $(document).ready(function () {
   });
 
   $(
-    " .blogs .blog .description  , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint "
+    " .blogs .blog .description , .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .hint "
   ).each(function () {
     var text = $(this).text();
-    if (text.length > 180) {
+    if (text.length > 140) {
       var truncatedText =
-        $.trim(text).substring(0, 180).split(" ").slice(0, -1).join(" ") +
+        $.trim(text).substring(0, 140).split(" ").slice(0, -1).join(" ") +
         "...";
       $(this).text(truncatedText);
     }

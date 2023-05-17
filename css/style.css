@@ -1865,4 +1865,109 @@ footer .copyright .company {
   color: var(--lightGrayColor);
   margin-bottom: 12px;
   font-size: small;
+}
+
+.aboutPage {
+  padding: 48px 0;
+}
+.aboutPage .aboutTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.aboutPage .row:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.aboutPage .info {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .aboutPage .info {
+    padding: 48px 16px;
+  }
+}
+.aboutPage .info .des {
+  color: var(--grayColor);
+}
+.aboutPage .info ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.aboutPage .info ul li {
+  padding: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aboutPage .info ul li::before {
+  content: "\f336";
+  font-family: "Font Awesome 6 Pro";
+  color: var(--secondColor);
+}
+.aboutPage .lazyImg {
+  position: relative;
+  height: 100%;
+}
+.aboutPage .lazyImg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border: 10px solid var(--mainColor);
+  width: 100%;
+  height: 90%;
+  transform: translateY(-50%);
+}
+.aboutPage .lazyImg .lazyDiv {
+  height: 100%;
+  margin: auto;
+}
+.aboutPage .lazyImg .lazyDiv .simpleParallax {
+  height: 100%;
+}
+.aboutPage .lazyImg .lazyDiv img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 85%;
+}
+.aboutPage .statistic {
+  padding: 24px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.aboutPage .statistic .counterUp {
+  font-weight: bold;
+  font-size: 100px;
+  background: rgba(140, 67, 255, 0.062745098);
+  background-size: contain;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-stroke: 1px #8c43ff;
+  font-family: "Manrope Alt", Sans-serif;
+}
+@media (max-width: 768px) {
+  .aboutPage .statistic .counterUp {
+    font-size: 70px;
+  }
+}
+.aboutPage .statistic h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  max-height: 100px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

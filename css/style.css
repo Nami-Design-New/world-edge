@@ -1171,7 +1171,7 @@ header .more .linksMenu.show {
   border-radius: 100%;
   z-index: -2;
   background-color: rgba(167, 169, 172, 0.1882352941);
-  box-shadow: 0px 0px 100vh 200px rgba(167, 169, 172, 0.5764705882);
+  box-shadow: 0px 0px 100vh 200px rgba(167, 169, 172, 0.2509803922);
 }
 .tips::before {
   content: "";
@@ -1183,7 +1183,7 @@ header .more .linksMenu.show {
   border-radius: 100%;
   z-index: -2;
   background-color: rgba(167, 169, 172, 0.1882352941);
-  box-shadow: 0px 0px 100vh 200px rgba(167, 169, 172, 0.3137254902);
+  box-shadow: 0px 0px 100vh 200px rgba(167, 169, 172, 0.2509803922);
 }
 .tips .sectionTitle {
   flex-direction: column;

@@ -284,7 +284,6 @@ button {
     padding: 8px 16px !important;
   }
 }
-
 content {
   min-height: 13.29vh;
   display: flex;
@@ -968,7 +967,7 @@ header {
           flex-direction: column;
           align-items: start;
         }
-        .videoContainer{
+        .videoContainer {
           overflow: hidden;
         }
         video {
@@ -1380,7 +1379,6 @@ header {
   padding: 100px 0;
   transition: var(--transition);
   background: #0000007a;
-
   .sectionTitle {
     background-image: linear-gradient(#000000b0, #0000009f),
       url(../img/bg2.avif);
@@ -1389,7 +1387,6 @@ header {
     padding: 24px;
     margin-bottom: 24px;
     min-height: 150px;
-
     .title {
       font-weight: bold;
       color: var(--lightGrayColor);
@@ -1663,7 +1660,6 @@ header {
 footer {
   background-color: var(--darkColor);
   box-shadow: 0px -13px 20px rgb(0 0 0 / 10%);
-
   .contactUs {
     padding: 160px 0 40px;
     .title {
@@ -1686,11 +1682,9 @@ footer {
         align-items: center;
         width: fit-content;
         color: var(--lightGrayColor);
-
         &:hover {
           color: var(--mainColor);
         }
-
         i {
           display: flex;
           justify-content: center;
@@ -1757,7 +1751,6 @@ footer {
     }
   }
 }
-
 .py-100 {
   padding: 100px 0;
 }
@@ -1776,7 +1769,6 @@ footer {
     }
   }
 }
-
 .banner {
   background-image: linear-gradient(#1f1f1fc9, #1f1f1fbe), url(../img/bg2.avif);
   background-size: cover;
@@ -1818,7 +1810,6 @@ footer {
     text-transform: capitalize;
   }
 }
-
 .casting {
   padding: 50px 0;
   form {
@@ -1847,7 +1838,6 @@ footer {
         font-size: 22px;
       }
     }
-
     label {
       color: var(--lightGrayColor);
       text-transform: capitalize;
@@ -1855,7 +1845,6 @@ footer {
       font-size: 12px;
       // font-weight: bold;
     }
-
     .form-control {
       border: none;
       background-color: #242424;
@@ -1882,16 +1871,13 @@ footer {
         gap: 16px;
       }
     }
-
     .hint {
       font-size: 14px;
       color: var(--grayColor);
       text-align: center;
-    
     }
   }
 }
-
 .select2-container--default .select2-selection--single {
   background-color: #242424;
   border: none;
@@ -1917,12 +1903,9 @@ footer {
 .filepond--drop-label {
   background-color: #242424;
 }
-
-
-.privacyPolicy{
+.privacyPolicy {
   padding: 50px 0;
-
-  .inner{
+  .inner {
     background-color: #191919;
     box-shadow: -20px 20px 0px rgb(0 0 0 / 50%);
     color: var(--lightGrayColor);
@@ -1930,22 +1913,25 @@ footer {
       box-shadow: -5px 10px 0px rgb(0 0 0 / 50%);
     }
     padding: 24px;
-    h1,h2,h3,h4,h5,h6{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       padding: 40px 0 10px;
       font-weight: bold;
     }
-    p{
+    p {
       color: var(--lightGrayColor);
       margin-bottom: 12px;
       font-size: small;
     }
   }
 }
-
-
 .aboutPage {
   padding: 48px 0;
-  .aboutTitle{
+  .aboutTitle {
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -2016,7 +2002,6 @@ footer {
       }
     }
   }
-
   .statistic {
     padding: 24px 0;
     display: flex;
@@ -2042,6 +2027,90 @@ footer {
       writing-mode: vertical-rl;
       max-height: 100px;
       text-align: center;
+    }
+  }
+}
+
+.blogDetails {
+  padding: 50px 0;
+  .blog {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: var(--transition);
+    padding-bottom: 48px;
+    // padding: 20px;
+    img {
+      aspect-ratio: 2/1;
+      object-fit: cover;
+      width: 100%;
+    }
+    .date {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--blackColor);
+      color: #777;
+      i {
+        color: var(--mainColor);
+        font-size: 16px;
+      }
+    }
+    .title {
+      color: var(--whiteColor);
+      transition: var(--transition);
+    }
+    .description {
+      color: #777;
+    }
+  }
+
+  .Moreblogs {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+    gap: 32px;
+
+    .headTitle {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 30px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 30%;
+        background-color: var(--mainColor);
+        height: 2px;
+        display: flex;
+        margin-top: 5px;
+      }
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+    .blog {
+      display: flex;
+      gap: 12px;
+      height: fit-content;
+      flex-direction: row;
+      padding-bottom: 0px;
+      padding: 0;
+      .data {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .title {
+        color: var(--lightGrayColor);
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
     }
   }
 }

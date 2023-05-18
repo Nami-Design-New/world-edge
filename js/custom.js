@@ -55,7 +55,7 @@ $(document).ready(function () {
       $(this).text(truncatedText);
     }
   });
-  $(" .blogs .blog .title ").each(function () {
+  $(" .blogs .blog .title  , .blogDetails .Moreblogs .blog .description").each(function () {
     var text = $(this).text();
     if (text.length > 45) {
       var truncatedText =

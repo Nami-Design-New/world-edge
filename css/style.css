@@ -1,12 +1,6 @@
 @charset "UTF-8";
 :root {
-  --mainColor: #8c43ff;
-  --mainColor10: #f7f2ff;
-  --mainColor30: #e6d7ff;
-  --secondColor: #23218e;
-  --secondColor10: #ececfa;
-  --secondColor30: #c5c5f1;
-  --thirdColor: #a792ff;
+  --mainColor: #a7a9ac;
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
@@ -260,7 +254,7 @@ span.select2.select2-container.select2-container--default {
   background-color: var(--whiteColor);
   border: none;
   padding: 8px;
-  border: 2px solid var(--mainColor30);
+  border: 2px solid var(--lightGrayColor);
   z-index: 1022;
   flex-direction: column;
   gap: 4px;
@@ -287,7 +281,7 @@ span.select2.select2-container.select2-container--default {
   right: 24px;
   transform: rotate(45deg);
   z-index: -2;
-  border: 2px solid var(--mainColor30);
+  border: 2px solid var(--lightGrayColor);
 }
 .dropdown .dropdown-menu::after {
   content: "";
@@ -411,7 +405,7 @@ content {
   width: 160px;
   height: 160px;
   z-index: 2;
-  background-color: var(--thirdColor);
+  background-color: var(--mainColor);
   transform: translate(50%, -50%);
   animation: slide-up 1.5s forwards;
 }
@@ -497,7 +491,7 @@ header nav .navMenu .navLink {
   text-transform: capitalize;
 }
 header nav .navMenu .navLink.active, header nav .navMenu .navLink:hover {
-  color: var(--thirdColor);
+  color: var(--mainColor);
 }
 header nav .navMenu .navLink.lang {
   margin-left: auto;
@@ -615,7 +609,7 @@ header .more .linksBtn {
   text-transform: uppercase;
 }
 header .more .linksBtn i {
-  color: var(--thirdColor);
+  color: var(--mainColor);
 }
 header .more .linksMenu {
   position: absolute;
@@ -778,7 +772,7 @@ header .more .linksMenu.show {
 .swiperControl .swiperBtns .swiper-button-prev:hover {
   opacity: 1;
   background-color: white;
-  color: var(--secondColor);
+  color: var(--mainColor);
 }
 .swiperControl .swiperBtns .swiper-button-next.swiper-button-disabled,
 .swiperControl .swiperBtns .swiper-button-prev.swiper-button-disabled {
@@ -967,7 +961,7 @@ header .more .linksMenu.show {
   width: fit-content;
   gap: 8px;
   align-items: baseline;
-  color: var(--mainColor30);
+  color: var(--lightGrayColor);
 }
 .mainSection .videoSlider .videoSliderContainer .swiper-slide .info .link:hover {
   color: var(--whiteColor);
@@ -1000,8 +994,8 @@ header .more .linksMenu.show {
   left: 50%;
   border-radius: 100%;
   z-index: -2;
-  background-color: rgba(140, 67, 255, 0.1882352941);
-  box-shadow: 0px 0px 100vw 300px rgba(140, 67, 255, 0.5019607843);
+  background-color: rgba(167, 169, 172, 0.1882352941);
+  box-shadow: 0px 0px 100vw 300px rgba(167, 169, 172, 0.5019607843);
 }
 
 .animatedLink {
@@ -1176,8 +1170,8 @@ header .more .linksMenu.show {
   top: 20%;
   border-radius: 100%;
   z-index: -2;
-  background-color: rgba(35, 33, 142, 0.1882352941);
-  box-shadow: 0px 0px 100vh 200px rgba(35, 33, 142, 0.8784313725);
+  background-color: rgba(167, 169, 172, 0.1882352941);
+  box-shadow: 0px 0px 100vh 200px rgba(167, 169, 172, 0.8784313725);
 }
 .tips::before {
   content: "";
@@ -1188,8 +1182,8 @@ header .more .linksMenu.show {
   bottom: 20%;
   border-radius: 100%;
   z-index: -2;
-  background-color: rgba(140, 67, 255, 0.1882352941);
-  box-shadow: 0px 0px 100vh 200px rgba(139, 67, 255, 0.5607843137);
+  background-color: rgba(167, 169, 172, 0.1882352941);
+  box-shadow: 0px 0px 100vh 200px rgba(167, 169, 172, 0.5607843137);
 }
 .tips .sectionTitle {
   flex-direction: column;
@@ -1253,7 +1247,7 @@ header .more .linksMenu.show {
   justify-content: center;
   align-items: center;
   transition: var(--transition);
-  background-color: rgba(140, 67, 255, 0.1882352941);
+  background-color: rgba(167, 169, 172, 0.1882352941);
   color: var(--whiteColor);
   text-transform: uppercase;
 }
@@ -1474,7 +1468,7 @@ header .more .linksMenu.show {
   justify-content: center;
   align-items: center;
   transition: var(--transition);
-  background-color: rgba(140, 67, 255, 0.1882352941);
+  background-color: rgba(167, 169, 172, 0.1882352941);
   color: var(--whiteColor);
   text-transform: uppercase;
   padding: 24px;
@@ -1519,7 +1513,7 @@ header .more .linksMenu.show {
 
 .partners {
   padding: 100px 0 20px;
-  background-image: linear-gradient(60deg, rgba(35, 33, 142, 0.1764705882), rgba(35, 33, 142, 0.3960784314));
+  background-image: linear-gradient(60deg, rgba(167, 169, 172, 0.1764705882), rgba(167, 169, 172, 0.3960784314));
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1917,7 +1911,7 @@ footer .copyright .company {
 .aboutPage .info ul li::before {
   content: "\f336";
   font-family: "Font Awesome 6 Pro";
-  color: var(--secondColor);
+  color: var(--mainColor);
 }
 .aboutPage .lazyImg {
   position: relative;
@@ -1957,12 +1951,12 @@ footer .copyright .company {
 .aboutPage .statistic .counterUp {
   font-weight: bold;
   font-size: 100px;
-  background: rgba(140, 67, 255, 0.062745098);
+  background: rgba(167, 169, 172, 0.062745098);
   background-size: contain;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-stroke: 1px #8c43ff;
+  -webkit-text-stroke: 1px #a7a9ac;
   font-family: "Manrope Alt", Sans-serif;
 }
 @media (max-width: 768px) {

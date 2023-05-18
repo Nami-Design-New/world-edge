@@ -1,11 +1,5 @@
 :root {
-  --mainColor: #8c43ff;
-  --mainColor10: #f7f2ff;
-  --mainColor30: #e6d7ff;
-  --secondColor: #23218e;
-  --secondColor10: #ececfa;
-  --secondColor30: #c5c5f1;
-  --thirdColor: #a792ff;
+  --mainColor: #a7a9ac;
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
@@ -225,8 +219,7 @@ span.select2.select2-container.select2-container--default {
     background-color: var(--whiteColor);
     border: none;
     padding: 8px;
-    // box-shadow: 0px 4px 8px var(--mainColor10);
-    border: 2px solid var(--mainColor30);
+    border: 2px solid var(--lightGrayColor);
     z-index: 1022;
     flex-direction: column;
     gap: 4px;
@@ -252,7 +245,7 @@ span.select2.select2-container.select2-container--default {
       right: 24px;
       transform: rotate(45deg);
       z-index: -2;
-      border: 2px solid var(--mainColor30);
+      border: 2px solid var(--lightGrayColor);
     }
     &::after {
       content: "";
@@ -385,7 +378,7 @@ content {
       width: 160px;
       height: 160px;
       z-index: 2;
-      background-color: var(--thirdColor);
+      background-color: var(--mainColor);
       transform: translate(50%, -50%);
       animation: slide-up 1.5s forwards;
       @media screen and (max-width: 1024px) {
@@ -602,7 +595,7 @@ header {
         text-transform: capitalize;
         &.active,
         &:hover {
-          color: var(--thirdColor);
+          color: var(--mainColor);
         }
         &.lang {
           margin-left: auto;
@@ -720,7 +713,7 @@ header {
       color: var(--whiteColor);
       text-transform: uppercase;
       i {
-        color: var(--thirdColor);
+        color: var(--mainColor);
       }
     }
     .linksMenu {
@@ -868,7 +861,7 @@ header {
       &:hover {
         opacity: 1;
         background-color: white;
-        color: var(--secondColor);
+        color: var(--mainColor);
       }
       &.swiper-button-disabled {
         opacity: 0.2;
@@ -1041,7 +1034,7 @@ header {
             width: fit-content;
             gap: 8px;
             align-items: baseline;
-            color: var(--mainColor30);
+            color: var(--lightGrayColor);
             &:hover {
               color: var(--whiteColor);
             }
@@ -1080,8 +1073,8 @@ header {
     left: 50%;
     border-radius: 100%;
     z-index: -2;
-    background-color: #8c43ff30;
-    box-shadow: 0px 0px 100vw 300px #8c43ff80;
+    background-color: #a7a9ac30;
+    box-shadow: 0px 0px 100vw 300px #a7a9ac80;
   }
 }
 .animatedLink {
@@ -1264,8 +1257,8 @@ header {
     top: 20%;
     border-radius: 100%;
     z-index: -2;
-    background-color: #23218e30;
-    box-shadow: 0px 0px 100vh 200px #23218ee0;
+    background-color: #a7a9ac30;
+    box-shadow: 0px 0px 100vh 200px #a7a9ace0;
   }
   &::before {
     content: "";
@@ -1276,8 +1269,8 @@ header {
     bottom: 20%;
     border-radius: 100%;
     z-index: -2;
-    background-color: #8c43ff30;
-    box-shadow: 0px 0px 100vh 200px #8b43ff8f;
+    background-color: #a7a9ac30;
+    box-shadow: 0px 0px 100vh 200px #a7a9ac8f;
   }
   .sectionTitle {
     flex-direction: column;
@@ -1343,7 +1336,7 @@ header {
     justify-content: center;
     align-items: center;
     transition: var(--transition);
-    background-color: #8c43ff30;
+    background-color: #a7a9ac30;
     color: var(--whiteColor);
     text-transform: uppercase;
     i {
@@ -1556,7 +1549,7 @@ header {
       justify-content: center;
       align-items: center;
       transition: var(--transition);
-      background-color: #8c43ff30;
+      background-color: #a7a9ac30;
       color: var(--whiteColor);
       text-transform: uppercase;
       padding: 24px;
@@ -1600,7 +1593,7 @@ header {
 }
 .partners {
   padding: 100px 0 20px;
-  background-image: linear-gradient(60deg, #23218e2d, #23218e65);
+  background-image: linear-gradient(60deg, #a7a9ac2d, #a7a9ac65);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1990,7 +1983,7 @@ footer {
         &::before {
           content: "\f336";
           font-family: "Font Awesome 6 Pro";
-          color: var(--secondColor);
+          color: var(--mainColor);
         }
       }
     }
@@ -2033,11 +2026,11 @@ footer {
     .counterUp {
       font-weight: bold;
       font-size: 100px;
-      background: #8c43ff10;
+      background: #a7a9ac10;
       background-size: contain;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      -webkit-text-stroke: 1px #8c43ff;
+      -webkit-text-stroke: 1px #a7a9ac;
       font-family: "Manrope Alt", Sans-serif;
       @media (max-width: 768px) {
         font-size: 70px;

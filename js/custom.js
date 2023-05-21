@@ -23,16 +23,20 @@ $(document).ready(function () {
   });
   // nav menu
   $(".more .linksBtn").click(function () {
-    $(this).toggleClass("show");
-    $(".more .linksMenu").toggleClass("show");
+    var moreContainer = $(this).parents(".more");
+    moreContainer.find(".linksBtn").toggleClass("show");
+    moreContainer.find(".linksMenu").toggleClass("show");
   });
+
   // hide menu when clicking outside
   $(document).click(function (event) {
-    if (!$(event.target).closest(".more").length) {
-      // if click happened outside of .more element, hide menu
-      $(".more .linksBtn").removeClass("show");
-      $(".more .linksMenu").removeClass("show");
-    }
+    var allMoreContainers = $(".more");
+    allMoreContainers.each(function () {
+      if (!$(event.target).closest(this).length) {
+        $(this).find(".linksBtn").removeClass("show");
+        $(this).find(".linksMenu").removeClass("show");
+      }
+    });
   });
   //navbar ainmation
   $(window).scroll(function () {
@@ -55,14 +59,17 @@ $(document).ready(function () {
       $(this).text(truncatedText);
     }
   });
-  $(" .blogs .blog .title  , .blogDetails .Moreblogs .blog .description").each(function () {
-    var text = $(this).text();
-    if (text.length > 45) {
-      var truncatedText =
-        $.trim(text).substring(0, 45).split(" ").slice(0, -1).join(" ") + "...";
-      $(this).text(truncatedText);
+  $(" .blogs .blog .title  , .blogDetails .Moreblogs .blog .description").each(
+    function () {
+      var text = $(this).text();
+      if (text.length > 45) {
+        var truncatedText =
+          $.trim(text).substring(0, 45).split(" ").slice(0, -1).join(" ") +
+          "...";
+        $(this).text(truncatedText);
+      }
     }
-  });
+  );
   $(" .production .inner .world .data p").each(function () {
     var text = $(this).text();
     if (text.length > 300) {

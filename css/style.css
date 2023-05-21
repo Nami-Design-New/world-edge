@@ -583,11 +583,6 @@ header nav .navBtn.active span:last-child {
     display: none;
   }
 }
-@media (min-width: 1200px) {
-  header .hideLg {
-    display: none !important;
-  }
-}
 header .more {
   position: relative;
   display: flex;
@@ -598,7 +593,7 @@ header .more .linksBtn {
   position: relative;
   display: flex;
   gap: 6px;
-  align-items: center;
+  align-items: baseline;
   padding: 12px 16px;
   cursor: pointer;
   transition: var(--transition);
@@ -606,14 +601,13 @@ header .more .linksBtn {
   width: -moz-fit-content;
   width: fit-content;
   color: var(--whiteColor);
-  text-transform: uppercase;
 }
 header .more .linksBtn i {
   color: var(--mainColor);
 }
 header .more .linksMenu {
   position: absolute;
-  right: 0%;
+  left: 0;
   top: calc(100% + 100px);
   z-index: 2;
   background-color: #141414;
@@ -626,10 +620,13 @@ header .more .linksMenu {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition);
-  width: 100%;
+  min-width: 100%;
+  width: -moz-max-content;
+  width: max-content;
 }
 header .more .linksMenu a {
-  color: var(--whiteColor);
+  color: var(--lightGrayColor);
+  font-size: 14px;
 }
 header .more .linksMenu.show {
   top: calc(100% + 8px);
@@ -1418,48 +1415,6 @@ header .more .linksMenu.show {
 .production .inner .tab-content {
   flex: 1;
 }
-.production .inner .movie {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-}
-.production .inner .movie .lazyDiv {
-  width: 100%;
-}
-.production .inner .movie img {
-  width: 100%;
-  aspect-ratio: 2/3;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.production .inner .movie::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0%;
-  opacity: 0.3;
-  transition: var(--transition);
-}
-.production .inner .movie .name {
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  z-index: 2;
-  padding: 16px;
-  transition: 0.7s ease-in-out;
-  text-transform: capitalize;
-}
-.production .inner .movie:hover::after {
-  opacity: 1;
-}
-.production .inner .movie:hover .name {
-  bottom: 0px;
-}
 .production .inner .seeMore {
   width: 100%;
   height: 100%;
@@ -1509,6 +1464,48 @@ header .more .linksMenu.show {
 .production .inner .world .data p {
   font-size: 12px;
   color: var(--grayColor);
+}
+.production .movie {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.production .movie .lazyDiv {
+  width: 100%;
+}
+.production .movie img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.production .movie::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  opacity: 0.3;
+  transition: var(--transition);
+}
+.production .movie .name {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  z-index: 2;
+  padding: 16px;
+  transition: 0.7s ease-in-out;
+  text-transform: capitalize;
+}
+.production .movie:hover::after {
+  opacity: 1;
+}
+.production .movie:hover .name {
+  bottom: 0px;
 }
 
 .partners {

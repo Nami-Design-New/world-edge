@@ -1309,6 +1309,30 @@ header .more .linksMenu.show {
     font-size: 24px !important;
   }
 }
+.production .mianTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.production .mianTitle::after {
+  content: "";
+  display: flex;
+  width: 100px;
+  height: 2px;
+  background-color: var(--mainColor);
+}
+.production .mianTitle::before {
+  content: "";
+  display: flex;
+  width: 70px;
+  height: 1px;
+  background-color: var(--mainColor);
+  order: 3;
+}
 .production .inner {
   display: flex;
   gap: 32px;
@@ -1478,6 +1502,7 @@ header .more .linksMenu.show {
   aspect-ratio: 2/3;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.5s ease-in-out;
 }
 .production .movie::after {
   content: "";
@@ -1498,8 +1523,11 @@ header .more .linksMenu.show {
   left: 0;
   z-index: 2;
   padding: 16px;
-  transition: 0.7s ease-in-out;
+  transition: 0.5s ease-in-out;
   text-transform: capitalize;
+}
+.production .movie:hover img {
+  transform: scale(1.05);
 }
 .production .movie:hover::after {
   opacity: 1;

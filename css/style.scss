@@ -689,7 +689,6 @@ header {
       }
     }
   }
-
   .more {
     position: relative;
     display: flex;
@@ -727,7 +726,6 @@ header {
       transition: var(--transition);
       min-width: 100%;
       width: max-content;
-
       a {
         // white-space: nowrap;
         color: var(--lightGrayColor);
@@ -1404,15 +1402,15 @@ header {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       display: flex;
       width: 100px;
       height: 2px;
       background-color: var(--mainColor);
     }
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       display: flex;
       width: 70px;
       height: 1px;
@@ -1517,7 +1515,6 @@ header {
     .tab-content {
       flex: 1;
     }
-
     .seeMore {
       width: 100%;
       height: 100%;
@@ -1579,8 +1576,7 @@ header {
       width: 100%;
       aspect-ratio: 2/3;
       object-fit: cover;
-      transition: .5s ease-in-out;
-
+      transition: 0.5s ease-in-out;
     }
     &::after {
       content: "";
@@ -1605,7 +1601,7 @@ header {
       text-transform: capitalize;
     }
     &:hover {
-      img{
+      img {
         transform: scale(1.05);
       }
       &::after {
@@ -1614,6 +1610,15 @@ header {
       .name {
         bottom: 0px;
       }
+    }
+  }
+  .latest {
+    display: flex;
+    gap: 24px;
+    img {
+      flex: 1 300px;
+      width: 100%;
+      aspect-ratio: 2/3;
     }
   }
 }
@@ -2059,7 +2064,6 @@ footer {
     }
   }
 }
-
 .blogDetails {
   padding: 50px 0;
   .blog {
@@ -2094,14 +2098,12 @@ footer {
       color: #777;
     }
   }
-
   .Moreblogs {
     display: flex;
     flex-direction: column;
     padding: 16px;
     height: 100%;
     gap: 32px;
-
     .headTitle {
       font-weight: bold;
       text-transform: uppercase;
@@ -2139,6 +2141,126 @@ footer {
         height: 120px;
         aspect-ratio: 1/1;
         object-fit: cover;
+      }
+    }
+  }
+}
+.movieDetails {
+  position: relative;
+  margin-top: -100px;
+  .videoContainer {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    min-height: 500px;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #1f1f1f80;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+    video,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.5);
+    }
+
+    .link {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      white-space: nowrap;
+      gap: 8px;
+      align-items: center;
+      z-index: 2;
+      flex-direction: column;
+      text-transform: uppercase;
+      i{
+        font-size: 30px;
+      }
+    }
+  }
+  .info {
+    margin-top: -50px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    background-color: #141414;
+   
+    img {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      padding: 20px ;
+      .name {
+        font-weight: bold;
+      }
+      .description {
+        color: gray;
+      }
+      .category {
+        color: var(--mainColor);
+        font-size: 14px;
+        // font-style: italic;
+      }
+      .date {
+        color: var(--lightGrayColor);
+        font-size: 12px;
+      }
+    }
+    .moreInfo{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      gap: 4px;
+      list-style: none;
+      padding: 20px 0;
+      li{
+        flex: calc(50% - 2px);
+        color: var(--grayColor);
+        padding: 8px;
+        display: flex;
+        position: relative;
+        gap: 4px;
+        flex-direction: column;
+        // &::before{
+        //   content: '';
+        //   display: block;
+        //   width: 4px;
+        //   height: 4px;
+        //   background-color: var(--mainColor);
+        //   border-radius: 100px;
+        // }
+        span{
+          text-transform: uppercase;
+          position: relative;
+          display: flex;
+          align-items: end;
+          gap: 2px;
+          font-weight: bold;
+          font-size: 12px;
+          color: var(--mainColor);
+          &::after{
+            content: ':';
+          }
+        }
       }
     }
   }

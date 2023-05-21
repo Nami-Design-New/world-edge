@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -30,6 +31,7 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- ================ loader ================= -->
   <!-- <div class="preloader">
@@ -100,145 +102,71 @@
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
-    <!-- ================ banner ================= -->
-    <div class="banner" style="background-image: linear-gradient(#1f1f1fc9, #1f1f1fbe), url(img/movis.avif);">
-      <div class="container">
-        <div class="links">
-          <a href="index.html"> Home </a>
-          <a href="#!" class="active"> Productions </a>
-          <a href="#!" class="active"> Movies </a>
-        </div>
-        <h2> Movies </h2>
+    <section class="movieDetails">
+      <!-- video -->
+      <div class="videoContainer">
+        <video autoplay="" muted="" preload="auto" playsinline="" loop="">
+          <source src="video/Gamers8 I Season Launch TVC I 2022_2.mp4" type="video/mp4">
+        </video>
+        <a href="video/Gamers8 I Season Launch TVC I 2022_2.mp4" data-fancybox="" class="link">
+          <i class="fa-sharp fa-light fa-circle-play"></i>
+          Watch now
+        </a>
+        <!-- show if no video -->
+        <!-- <img  src="img/p4.jpg" alt=""> -->
       </div>
-    </div>
-    <!-- ================  / banner ================= -->
-    <!-- production -->
-    <section class="production">
+      <!-- info -->
       <div class="container">
-        <!-- <div class="latest">
-          <img src="img/VoyVoyVoy.jpg" alt="">
-          <div class="info">
-            <h6 class="name"> VOY! VOY! VOY! </h6>
-            <p class="description">
-              tells the story of Hassan — a security guard living an impoverished life with his mother
-              who dreams of traveling and living abroad. One day he stumbles on the sport of blind soccer and cunningly
-              decides to pose as a visually impaired man to join a team right before the World Cup tournament in Europe.
-              On his journey, he crosses paths with several characters, an attractive young journalist who starts to
-              take an interest in the team, a middle-aged coach looking for an opportunity, and his two best friends.
-              Along the way, Hassan goes to unimaginable lengths to be with the team and not miss out on Europe, hoping
-              that this will provide their ticket to a life with more opportunity.
-            </p>
-          </div>
-        </div>
-        <h3 class="mianTitle"> All movies </h3> -->
-        <div class="row">
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p1.jpg" alt="">
+        <div class="info">
+          <div class="row">
+            <!-- image -->
+            <div class="col-md-4 col-xl-3 p-2">
+              <img src="img/p3.jpg" alt="">
+            </div>
+            <!-- data -->
+            <div class="col-md-8 col-xl-9 p-2">
+              <div class="details">
+                <h1 class="name"> Gamers8 </h1>
+                <div class="date">
+                  <i class="fa-duotone fa-calendar-days"></i> 18 , February , 2023
+                </div>
+                <a href="productions.html" class="category"> Movies </a>
+                <p class="description">
+                  The world's largest gaming and esports event and destination for the world's elite
+                  esports champions & gaming universe lovers in Saudi Arabia.The world's largest gaming and esports
+                  event and destination for the world's elite
+                  esports champions & gaming universe lovers in Saudi Arabia.
+                </p>
+                <ul class="moreInfo">
+                  <li>
+                    <span> Director </span>
+                    mahmoud elkomy
+                  </li>
+                  <li>
+                    <span> Writer </span>
+                    emad magdy
+                  </li>
+                  <li>
+                    <span> Release Date </span>
+                    18 , February , 2023
+                  </li>
+                  <li>
+                    <span> Company credits </span>
+                    World Edge
+                  </li>
+                  <li>
+                    <span> Language </span>
+                    arabic
+                  </li>
+                </ul>
               </div>
-              <h6 class="name"> Interstellar </h6>
-            </a>
+            </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p2.jpg" alt="">
-              </div>
-              <h6 class="name"> The Dark Knight </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p3.jpg" alt="">
-              </div>
-              <h6 class="name"> The Covenant </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p4.jpg" alt="">
-              </div>
-              <h6 class="name"> Star Trek: Picard </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p4.jpg" alt="">
-              </div>
-              <h6 class="name"> Star Trek: Picard </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p1.jpg" alt="">
-              </div>
-              <h6 class="name"> Interstellar </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p2.jpg" alt="">
-              </div>
-              <h6 class="name"> The Dark Knight </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p1.jpg" alt="">
-              </div>
-              <h6 class="name"> Interstellar </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p2.jpg" alt="">
-              </div>
-              <h6 class="name"> The Dark Knight </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p3.jpg" alt="">
-              </div>
-              <h6 class="name"> The Covenant </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p4.jpg" alt="">
-              </div>
-              <h6 class="name"> Star Trek: Picard </h6>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-1" data-aos="fade-up">
-            <a href="movie-details.html" class="movie">
-              <div class="lazyDiv up">
-                <img class="lazy" data-src="img/p4.jpg" alt="">
-              </div>
-              <h6 class="name"> Star Trek: Picard </h6>
-            </a>
-          </div>
-        </div>
-        <div class="loadMore mt-5">
-          <a href="#!" class="animatedLink white">
-            load more
-            <i class="fa-light fa-loader spin"> </i>
-            <i class="fa-light fa-arrow-down-long ">
-              <span></span>
-            </i>
-          </a>
+
+
         </div>
       </div>
+
     </section>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -320,4 +248,5 @@
   <!-- custom -->
   <script src="js/custom.js"></script>
 </body>
+
 </html>

@@ -1535,6 +1535,15 @@ header .more .linksMenu.show {
 .production .movie:hover .name {
   bottom: 0px;
 }
+.production .latest {
+  display: flex;
+  gap: 24px;
+}
+.production .latest img {
+  flex: 1 300px;
+  width: 100%;
+  aspect-ratio: 2/3;
+}
 
 .partners {
   padding: 100px 0 20px;
@@ -2086,4 +2095,117 @@ footer .copyright .company {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.movieDetails {
+  position: relative;
+  margin-top: -100px;
+}
+.movieDetails .videoContainer {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  min-height: 500px;
+}
+.movieDetails .videoContainer::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 31, 31, 0.5019607843);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.movieDetails .videoContainer video,
+.movieDetails .videoContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transform: scale(1.5);
+}
+.movieDetails .videoContainer .link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  white-space: nowrap;
+  gap: 8px;
+  align-items: center;
+  z-index: 2;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.movieDetails .videoContainer .link i {
+  font-size: 30px;
+}
+.movieDetails .info {
+  margin-top: -50px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
+  background-color: #141414;
+}
+.movieDetails .info img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.movieDetails .info .details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  padding: 20px;
+}
+.movieDetails .info .details .name {
+  font-weight: bold;
+}
+.movieDetails .info .details .description {
+  color: gray;
+}
+.movieDetails .info .details .category {
+  color: var(--mainColor);
+  font-size: 14px;
+}
+.movieDetails .info .details .date {
+  color: var(--lightGrayColor);
+  font-size: 12px;
+}
+.movieDetails .info .moreInfo {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  padding: 20px 0;
+}
+.movieDetails .info .moreInfo li {
+  flex: calc(50% - 2px);
+  color: var(--grayColor);
+  padding: 8px;
+  display: flex;
+  position: relative;
+  gap: 4px;
+  flex-direction: column;
+}
+.movieDetails .info .moreInfo li span {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--mainColor);
+}
+.movieDetails .info .moreInfo li span::after {
+  content: ":";
 }/*# sourceMappingURL=style.css.map */
